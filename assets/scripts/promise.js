@@ -1,41 +1,24 @@
-const getWeather = () => {
+// real world example
+const fetchData = () => {
     return new Promise((resolve, reject) => {
-        // async process
-        //reject('Sunny');
-        setTimeout(() => {
-            resolve('Rainy')
-        }, 1000);
+        fetch('https://api.weather.gov/gridpoints/OKX/35,35/forecast')
+            .then(response => response.json())
+            .then(data => resolve(data.properties.periods[1].shortForecast));
     });
+};
+
+const displayData = (weather) => {
+    console.log(weather);
 }
 
-const getWeatherIcon = (weather) => {
-    return new Promise((resolve, reject) => {
-        // async process
-        //reject('Sunny');
-        setTimeout(() => {
-            switch (weather) {
-                case 'Sunny':
-                    resolve('☀️');
-                case 'Rainy':
-                    resolve('🌧️');
-                case 'Cloudy':
-                    resolve('☁️');
-                default:
-                    reject('no icons found');
-            }
-        }, 1000);
+const onError = (error) => {
+    console.log(`error ${error}`)
+}
+
+
+fetchData()
+    .then(displayData)
+    .catch(onError)
+    .finally(() => {
+        console.log('clean up here on finally');
     });
-}
-
-const onSuccess = (data) => {
-    console.log(`Success here data: ${data}`);
-}
-
-const onReject = (error) => {
-    console.log(`Reject here error: ${error}`);
-}
-
-// promise chaining 😍😍
-getWeather()
-    .then(getWeatherIcon)
-    .then(onSuccess, onReject);
