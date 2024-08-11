@@ -15,7 +15,6 @@ const onError = (error) => {
     console.log(`error ${error}`)
 }
 
-
 fetchData()
     .then(displayData)
     .catch(onError)
