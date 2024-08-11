@@ -1,13 +1,15 @@
-# https://github.com/redgsenal/javscript-functions-crash-course
-
 # JavaScript Functions Crash Course
 
-# https://www.youtube.com/watch?v=j1laALb8OVM
+## All about javascript function concepts and examples
 
-# Sync / Async and Callback functions
+### https://github.com/redgsenal/javscript-functions-crash-course
 
-# https://www.youtube.com/watch?v=QSqc6MMS6Fk
+### https://www.youtube.com/watch?v=j1laALb8OVM
 
-# Tiktok: ColorCode.io
+## Sync / Async and Callback functions
 
-# IG: ColorCode.io
+### https://www.youtube.com/watch?v=QSqc6MMS6Fk
+
+### Tiktok: ColorCode.io
+
+### IG: ColorCode.io
