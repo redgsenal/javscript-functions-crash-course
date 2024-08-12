@@ -3,7 +3,7 @@ const fetchData = () => {
     return new Promise((resolve, reject) => {
         fetch('https://api.weather.gov/gridpoints/OKX/35,35/forecast')
             .then(response => response.json())
-            .then(data => resolve(data.properties.periods[1].shortForecast));
+            .then(data => resolve(data.properties.periods[0].shortForecast));
     });
 };
 
